@@ -59,7 +59,7 @@ function Items()
        ),
     },
     {
-        title :'Price/kg',
+        title :'Price',
         dataIndex :'price'
     },
     {

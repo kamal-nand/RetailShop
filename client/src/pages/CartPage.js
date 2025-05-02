@@ -141,7 +141,7 @@ function CartPage() {
           description: 'XYZ',//
           handler: function (response) {
               console.log(response, "34")
-              axios.post('http://localhost:3000', { response: response })
+              axios.post('https://retailshop-backend.onrender.com', { response: response })
                   .then(res => {
                       console.log(res, "37")
                       // your orders
@@ -158,7 +158,7 @@ function CartPage() {
   }
      const handlePayment = () => {
       
-      axios.post('http://localhost:3000/payments', xamount)
+      axios.post('https://retailshop-backend.onrender.com/payments', xamount)
           .then(res => {
               console.log(xamount, "29")
               handleOpenRazorpay(xamount)

@@ -29,20 +29,21 @@ useEffect(()=>{
   return (
     <div className='authentication'> 
      <Row>
-       <Col lg={8} xs={22}>  
+       <Col  lg={8} xs={22}>  
        <Form 
          layout="vertical"
          onFinish={onFinish}
          >
-        <h1>MY GARAGE</h1>
+        <h1>Spencer's</h1>
         <hr/>
         <h3>Login</h3>
             
-            <Form.Item name='userId' label='User ID'>
-              <Input  />
+        <Form.Item name='userId' label='Email Id' >
+              <Input placeholder="Enter your Email Id" />
             </Form.Item>
             <Form.Item name='password' label='Password'>
-              <Input type='password' />
+              <Input type='password' placeholder="Enter your password" />
+              {/* <Input.Password placeholder="Enter your password" /> */}
             </Form.Item>
             
             

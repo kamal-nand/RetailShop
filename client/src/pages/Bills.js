@@ -44,19 +44,19 @@ function Bills()
        
     },
     {
-        title :'SubTotal',
+        title :'Gross',
         dataIndex :'subtotal',
     },
-    {
-      title :'Tax',
-      dataIndex :'tax',
-    },
+    // {
+    //   title :'Handling Fee',
+    //   dataIndex :'tax',
+    // },
     {
       title :'Total',
       dataIndex :'totalAmount',
     },
     {
-      title :'Actions',
+      title :'View Bill ',
       dataIndex :'_id',
       render: (id, record) => (
         <div className='d-flex'>
@@ -77,7 +77,7 @@ function Bills()
 
     },
     {
-        title :'Price/kg',
+        title :'Price',
         dataIndex :'price'
     },
     {
@@ -129,35 +129,35 @@ function Bills()
          <div className='bill-model p-3' ref={componentRef}>
             <div className='d-flex justify-content-between bill-header pb-2'>
                <div>
-                 <h1><b>My Garage</b></h1>
+                 <h1><b>Spencer's</b></h1>
                </div>
                <div>
-                 <p>DalsinghSarai</p>
-                 <p>NH:28 HUDA MARKET 848114</p>
-                 <p>9865234128</p>
+                 <p>Upohar Township</p>
+                 <p>Chakgaria 700094</p>
+                 <p>1800 123 6868</p>
                </div>
             </div>
              <div className='bill-customer-details my-2'>
                  <p>
-                  <b>Name</b> :{selectedBill.customerName}
+                  <b>Name</b> : {selectedBill.customerName}
                  </p>
                  <p>
-                  <b>Phone Number</b> :{selectedBill.customerPhoneNumber}
+                  <b>Email Id</b> : {selectedBill.customerPhoneNumber}
                  </p>
                  <p>
-                  <b>Date</b> :{" "}
+                  <b>Date</b> : {" "}
                   {selectedBill.createdAt.toString().substring(0,10)}
                  </p>
              </div>
             <Table dataSource = {selectedBill.cartItems} columns={cartcolumns} pagination={false}/>
           
           <div className='dotted-border'>
-              <p><b>SUB TOTAL</b> : {selectedBill.subtotal}</p>
-              <p><b>Tax</b> : {selectedBill.tax}</p>
+              <p><b>SUB TOTAL</b> : ₹{selectedBill.subtotal}</p>
+              <p><b>Handling Fee</b> : ₹10{/*{selectedBill.tax}*/}</p>
           </div>
           
           <div>
-              <h2><b>GRAND TOTAL : {selectedBill.totalAmount}</b></h2>
+              <h2><b>GRAND TOTAL : ₹{selectedBill.totalAmount}</b></h2>
           </div>
           <div className='dotted-border'></div>
           <div className='text-center'>

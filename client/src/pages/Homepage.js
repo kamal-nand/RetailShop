@@ -10,28 +10,32 @@ function Homepage() {
   const [selectedCategory, setSelectedCategory]=useState('fruits')
   const categories = [
     {
-      name : 'fruits',
+      name : 'Fruits',
       imageURL : 'https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4',
     },
     {
-      name : 'vegetables',
+      name : 'Vegetables',
       imageURL : 'https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg',
     },
     {
-      name : 'meat',
+      name : 'Meat',
       imageURL : 'https://images.ctfassets.net/3s5io6mnxfqz/5GlOYuzg0nApcehTPlbJMy/140abddf0f3f93fa16568f4d035cd5e6/AdobeStock_175165460.jpeg',
     },
     {
-      name : 'meat1',
-      imageURL : 'https://images.ctfassets.net/3s5io6mnxfqz/5GlOYuzg0nApcehTPlbJMy/140abddf0f3f93fa16568f4d035cd5e6/AdobeStock_175165460.jpeg',
+      name : 'Dairy',
+      imageURL : 'https://www.shutterstock.com/image-photo/new-delhi-india-may-2022-600nw-2163953449.jpg',
     },
     {
-      name : 'meat2',
-      imageURL : 'https://images.ctfassets.net/3s5io6mnxfqz/5GlOYuzg0nApcehTPlbJMy/140abddf0f3f93fa16568f4d035cd5e6/AdobeStock_175165460.jpeg',
+      name : 'Snacks',
+      imageURL : 'https://m.media-amazon.com/images/I/81ZX-dvnU1L.jpg',
     },
     {
-      name : 'meat3',
-      imageURL : 'https://images.ctfassets.net/3s5io6mnxfqz/5GlOYuzg0nApcehTPlbJMy/140abddf0f3f93fa16568f4d035cd5e6/AdobeStock_175165460.jpeg',
+      name : 'Drinks',
+      imageURL : 'https://5.imimg.com/data5/TO/XJ/QN/ANDROID-80650971/product-jpeg-500x500.jpg',
+    },
+    {
+      name : 'Health & Wellness',
+      imageURL : 'https://ik.imagekit.io/wlfr/wellness/images/category/l1/sexual-wellness/Hero-0.png/tr:w-3840,c-at_max,cm-pad_resize,f-auto,q-70',
     }
   ]
   const dispatch = useDispatch()

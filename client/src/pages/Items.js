@@ -155,12 +155,13 @@ function Items()
             <Form.Item name='category' label='Category'>
               <Select>
      
-                  <Select.Option value='fruits'>Fruits</Select.Option>
-                  <Select.Option value='vegetables'>Vegetables</Select.Option>
-                  <Select.Option value='meat'>Meat</Select.Option>
-                  <Select.Option value='meat1'>Meat1</Select.Option>
-                  <Select.Option value='meat2'>Meat2</Select.Option>
-                  <Select.Option value='meat3'>Meat3</Select.Option>
+                  <Select.Option value='Fruits'>Fruits</Select.Option>
+                  <Select.Option value='Vegetables'>Vegetables</Select.Option>
+                  <Select.Option value='Meat'>Meat</Select.Option>
+                  <Select.Option value='Dairy'>Dairy</Select.Option>
+                  <Select.Option value='Snacks'>Snacks</Select.Option>
+                  <Select.Option value='Drinks'>Drinks</Select.Option>
+                  <Select.Option value='Health & Wellness'>Health & Wellness</Select.Option>
               </Select>
             </Form.Item>
 

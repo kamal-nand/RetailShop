@@ -74,38 +74,13 @@ function CartPage() {
 
      },[cartItems]);
 
-    //  const onFinish=async(values)=>{
-    //    const reqObject={
-    //        ...values, 
-    //        subtotal,
-    //        cartItems,
-    //        tax: Number(((subtotal / 100) * 10).toFixed(2)),
-    //        totalAmount : Number(subtotal + Number(((subtotal / 100) * 10 ).toFixed(2))),
-    //        userId : JSON.parse(localStorage.getItem('pos-user'))._id
-    
-    //    }
-//     axios
-//     .post('/api/bills/charge-bill', reqObject)
-//     .then(()=>{
-//       message.success('Bills Charged Successfully');
-    
-//       navigate('/bills')
-      
-//     })
-//     .catch(()=>{
-//       message.success('Something went wrong') 
-//     })
-    
-    
-
-//  };
     const onFinish = async (values) => {
         const reqObject = {
           ...values,
           subtotal,
           cartItems,
           tax: Number(((subtotal / 100) * 10).toFixed(2)),
-          totalAmount: Number(subtotal + Number(((subtotal / 100) * 10).toFixed(2))),
+          totalAmount: Number(subtotal + 10),
           userId: JSON.parse(localStorage.getItem('pos-user'))._id,
         };
       
@@ -114,13 +89,10 @@ function CartPage() {
           .then(() => {
             message.success('Bills Charged Successfully');
       
-            // ✅ Clear the cart
             dispatch({ type: 'emptyCart' });
       
-            // ✅ Close modal
             setBillChargeModal(false);
       
-            // ✅ Redirect to bills page
             navigate('/bills');
           })
           .catch(() => {
@@ -129,7 +101,7 @@ function CartPage() {
       };
       
 
-     const xamount=subtotal + ((subtotal / 100) * 10);
+     const xamount=subtotal + 10 ;
      const handleOpenRazorpay = (data) => {
 
       const options = {
@@ -141,7 +113,7 @@ function CartPage() {
           description: 'XYZ',//
           handler: function (response) {
               console.log(response, "34")
-              axios.post('https://retailshop-backend.onrender.com', { response: response })
+              axios.post('https://localhost:3000', { response: response })
                   .then(res => {
                       console.log(res, "37")
                       // your orders
@@ -158,7 +130,7 @@ function CartPage() {
   }
      const handlePayment = () => {
       
-      axios.post('https://retailshop-backend.onrender.com/payments', xamount)
+      axios.post('https://localhost:3000/payments', xamount)
           .then(res => {
               console.log(xamount, "29")
               handleOpenRazorpay(xamount)
@@ -174,7 +146,7 @@ function CartPage() {
        <hr />
        <div className='d-flex justify-content-end flex-column align-items-end'>
             <div className='subtotal'>
-                <h3>SUB TOTAL : <b>{subtotal} $/-</b></h3>
+                <h3>SUB TOTAL : <b>{subtotal} ₹/-</b></h3>
             </div>
        
        
@@ -204,10 +176,10 @@ function CartPage() {
             </Form.Item>
 
             <div className='charge-bill-amount'>
-                 <h5>SubTotal : <b>{subtotal}</b></h5> 
-                 <h5>Tax : <b>{((subtotal / 100) * 10).toFixed(2)}</b></h5>
+                 <h5>SubTotal : ₹<b>{subtotal}</b></h5> 
+                 <h5>Handling Fee : ₹<b>10</b></h5>
                  <hr  />
-                 <h2>Grand Total : <b>{subtotal + ((subtotal / 100) * 10)}</b> </h2>
+                 <h2>Grand Total : ₹<b>{subtotal + 10}</b> </h2>
                  
             </div>
 

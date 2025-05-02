@@ -30,17 +30,17 @@ function Register() {
          layout="vertical"
          onFinish={onFinish}
          >
-        <h1>MY GARAGE</h1>
+        <h1>Spencer's</h1>
         <hr/>
         <h3>Register</h3>
-            <Form.Item  name='name' label='Name'>
-              <Input  />
+        <Form.Item  name='name' label='Name'>
+              <Input placeholder="Enter your Name" />
             </Form.Item>
             <Form.Item name='userId' label='User ID'>
-              <Input  />
+              <Input placeholder="Enter your User ID"  />
             </Form.Item>
             <Form.Item name='password' label='Password'>
-              <Input type='password' />
+            <Input type='password' placeholder="Enter your password" />
             </Form.Item>
             
             

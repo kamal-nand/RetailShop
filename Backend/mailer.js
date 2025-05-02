@@ -16,9 +16,9 @@ const nodemailer = require('nodemailer')
         });
 
           const mailOptions={
-            from: 'neerajkumarburnwal.cse2021@nsec.ac.in', 
+            from: 'kamalnand.cse2021@nsec.ac.in', 
             to: userdetails.customerPhoneNumber, 
-            subject: "MG Shoppers",
+            subject: "Spencer's",
             html: `thank you for youe shopping for queries give your bill id only which is ${userdetails._id}`, 
           }
           const mailResponse = await transport.sendMail(mailOptions)

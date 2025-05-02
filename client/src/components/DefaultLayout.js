@@ -1,4 +1,3 @@
-
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -28,7 +27,6 @@ const DefaultLayout = (props) => {
    
    useEffect(() => {
      localStorage.setItem('cartItems' , JSON.stringify(cartItems));
-    //  console.log(cartItems);
    }, [cartItems])   
    
   return (
@@ -45,7 +43,7 @@ const DefaultLayout = (props) => {
       )}
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
-          <h3>{collapsed ? 'MG' : 'MY GARAGE'}</h3>
+          <h3>{collapsed ? 'MG' : 'Spencer\'s'}</h3>
         </div>
         <Menu
           theme="dark"
